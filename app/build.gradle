@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "guuilp.com.github.bppmobiletest"
+        minSdkVersion 23
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'BPP_BASE_URL', '"http://test-mobile.dev-bpp.com.br"'
+        }
+
+        debug{
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'BPP_BASE_URL', '"http://test-mobile.dev-bpp.com.br"'
+        }
+    }
+}
+
+kapt {
+    generateStubs = true
+}
+
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation "com.android.support:recyclerview-v7:$support_version"
+    implementation "com.android.support:design:$support_version"
+
+    implementation "android.arch.lifecycle:runtime:$archComponents"
+    implementation "android.arch.lifecycle:extensions:$archComponents"
+    kapt "android.arch.lifecycle:compiler:$archComponents"
+
+    implementation "com.android.support.constraint:constraint-layout:$constraint"
+
+    implementation "android.arch.persistence.room:runtime:$room"
+    kapt "android.arch.persistence.room:compiler:$room"
+
+    implementation "org.jetbrains.anko:anko:$anko"
+    implementation "org.jetbrains.anko:anko-design:$anko"
+
+    implementation "com.google.dagger:dagger-android:$dagger"
+    implementation "com.google.dagger:dagger-android-support:$dagger"
+    kapt "com.google.dagger:dagger-android-processor:$dagger"
+    kapt "com.google.dagger:dagger-compiler:$dagger"
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+
+    androidTestImplementation "com.android.support.test:rules:$test_support"
+    androidTestImplementation "com.android.support.test:runner:$test_support"
+
+    testImplementation "org.mockito:mockito-core:$mockito"
+
+    testImplementation "android.arch.core:core-testing:$archComponents"
+    androidTestImplementation "android.arch.core:core-testing:$archComponents"
+}
