@@ -4,11 +4,13 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.Transformations
 import android.arch.lifecycle.ViewModel
+import android.util.Base64
 import guuilp.com.github.bppmobiletest.data.BPPRepository
 import guuilp.com.github.bppmobiletest.data.local.User
 import guuilp.com.github.bppmobiletest.data.remote.LoginResponse
 import guuilp.com.github.bppmobiletest.network.Resource
 import guuilp.com.github.bppmobiletest.utils.AbsentLiveData
+import guuilp.com.github.bppmobiletest.utils.encode
 
 class LoginViewModel(private val repository: BPPRepository): ViewModel(){
 
@@ -31,6 +33,6 @@ class LoginViewModel(private val repository: BPPRepository): ViewModel(){
             return
         }
 
-        user.value = User(email, password)
+        user.value = User(email, password.encode())
     }
 }

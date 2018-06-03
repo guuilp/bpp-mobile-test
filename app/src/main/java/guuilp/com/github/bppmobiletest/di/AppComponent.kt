@@ -3,6 +3,7 @@ package guuilp.com.github.bppmobiletest.di
 import android.content.Context
 import dagger.Component
 import guuilp.com.github.bppmobiletest.BPPApplication
+import guuilp.com.github.bppmobiletest.ui.invoice.InvoiceListActivity
 import guuilp.com.github.bppmobiletest.ui.login.LoginActivity
 import javax.inject.Singleton
 
@@ -13,6 +14,8 @@ interface AppComponent{
     fun inject(application: BPPApplication)
 
     fun inject(loginActivity: LoginActivity)
+
+    fun inject(invoiceListActivity: InvoiceListActivity)
 
     fun context(): Context
 }

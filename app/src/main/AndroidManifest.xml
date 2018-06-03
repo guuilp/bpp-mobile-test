@@ -18,7 +18,9 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity android:name=".ui.invoice.InvoiceListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

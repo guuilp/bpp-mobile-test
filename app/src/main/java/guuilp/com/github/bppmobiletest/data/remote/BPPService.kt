@@ -9,7 +9,7 @@ interface BPPService {
 
     @POST("/login")
     @FormUrlEncoded
-    fun login(@Field("email") email: String, @Field("password") password: String): LiveData<ApiResponse<LoginResponse>>
+    fun login(@Field("email") email: String, @Field("password") password: String?): LiveData<ApiResponse<LoginResponse>>
 
     @GET("/invoice")
     fun getInvoiceList(): LiveData<ApiResponse<List<Invoice>>>

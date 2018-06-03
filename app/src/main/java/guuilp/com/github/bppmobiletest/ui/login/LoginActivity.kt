@@ -8,17 +8,19 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import guuilp.com.github.bppmobiletest.BPPApplication
 import guuilp.com.github.bppmobiletest.R
+import guuilp.com.github.bppmobiletest.ui.invoice.InvoiceListActivity
+import guuilp.com.github.bppmobiletest.utils.PreferenceHelper
+import guuilp.com.github.bppmobiletest.utils.PreferenceHelper.get
+import guuilp.com.github.bppmobiletest.utils.PreferenceHelper.set
 import guuilp.com.github.bppmobiletest.utils.Status
+import guuilp.com.github.bppmobiletest.utils.hideKeyboard
 import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.design.longSnackbar
 import org.jetbrains.anko.design.snackbar
 import org.jetbrains.anko.inputMethodManager
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import javax.inject.Inject
-
-fun View.hideKeyboard(inputMethodManager: InputMethodManager) {
-    inputMethodManager.hideSoftInputFromWindow(windowToken, 0)
-}
 
 class LoginActivity: AppCompatActivity(){
 
@@ -43,7 +45,10 @@ class LoginActivity: AppCompatActivity(){
 
                 when (it.status) {
                     Status.SUCCESS -> {
-                        toast("Foi!")
+                        val prefs = PreferenceHelper.defaultPrefs(this)
+                        prefs["logged"] = true
+
+                        startActivity<InvoiceListActivity>()
                     }
                     Status.ERROR -> {
                         longSnackbar(clLogin, it.message.toString())

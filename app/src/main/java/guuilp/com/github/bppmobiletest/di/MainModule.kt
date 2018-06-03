@@ -6,6 +6,7 @@ import guuilp.com.github.bppmobiletest.data.BPPRepository
 import guuilp.com.github.bppmobiletest.data.local.BPPDatabase
 import guuilp.com.github.bppmobiletest.data.local.BPPLocal
 import guuilp.com.github.bppmobiletest.data.remote.BPPService
+import guuilp.com.github.bppmobiletest.ui.invoice.InvoiceListViewModelFactory
 import guuilp.com.github.bppmobiletest.ui.login.LoginViewModelFactory
 import retrofit2.Retrofit
 import javax.inject.Singleton
@@ -15,6 +16,10 @@ class MainModule{
     @Provides
     @Singleton
     fun providesLoginViewModelFactory(repository: BPPRepository): LoginViewModelFactory = LoginViewModelFactory(repository)
+
+    @Provides
+    @Singleton
+    fun providesInvoiceListViewModelFactory(repository: BPPRepository): InvoiceListViewModelFactory = InvoiceListViewModelFactory(repository)
 
     @Provides
     @Singleton

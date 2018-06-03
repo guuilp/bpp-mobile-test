@@ -40,7 +40,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilEmail"
-        app:layout_constraintBottom_toBottomOf="@+id/btLogin"
+        app:layout_constraintBottom_toTopOf="@+id/btLogin"
         app:layout_constraintVertical_chainStyle="packed"
 
         app:passwordToggleEnabled="true"
@@ -54,7 +54,7 @@
             android:imeOptions="actionSearch"
             android:inputType="textPassword"
             android:singleLine="true"
-            android:text="QnJAc2lsUFAxMjM=" />
+            android:text="Br@silPP123" />
 
     </android.support.design.widget.TextInputLayout>
 
