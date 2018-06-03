@@ -1,5 +1,7 @@
 # bpp-mobile-test
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/93e40e4f9e264a12b329e42ba976d96c)](https://app.codacy.com/app/guuilp/bpp-mobile-test?utm_source=github.com&utm_medium=referral&utm_content=guuilp/bpp-mobile-test&utm_campaign=badger)
+
 
 
 >### OBSERVAÇÕES
