@@ -4,7 +4,6 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.Transformations
 import android.arch.lifecycle.ViewModel
-import android.util.Base64
 import guuilp.com.github.bppmobiletest.data.BPPRepository
 import guuilp.com.github.bppmobiletest.data.local.User
 import guuilp.com.github.bppmobiletest.data.remote.LoginResponse

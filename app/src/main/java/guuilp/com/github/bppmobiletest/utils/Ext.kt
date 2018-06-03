@@ -27,6 +27,11 @@ fun String.formatDate() : String {
     return format.format(dateValue)
 }
 
-fun Double.formatCurrency() : String {
-    return "R$ ${this}"
+fun Double.formatCurrency(currency: String) : String {
+    val valueTwoDecimal = "%.2f".format(this)
+
+    return when(currency){
+        "BRL" -> "R$ $valueTwoDecimal"
+        else -> valueTwoDecimal
+    }
 }

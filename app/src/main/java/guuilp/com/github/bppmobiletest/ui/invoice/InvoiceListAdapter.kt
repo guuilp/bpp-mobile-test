@@ -46,7 +46,7 @@ class InvoiceListAdapter(
             val dateTime = itemView.tvDateTime
             val place = itemView.tvPlace
             val price = itemView.tvPrice
-            val priceString = "${invoice.transactionAmount.formatCurrency()} (${invoice.transactionStatus})"
+            val priceString = "${invoice.transactionAmount.formatCurrency(invoice.transactionCurrency)} (${invoice.transactionStatus})"
 
             dateTime.text = invoice.transactionFormattedDate.formatDate()
             place.text = invoice.merchantName

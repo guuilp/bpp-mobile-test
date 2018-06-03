@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="16dp">
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="16dp">
 
     <TextView
         android:id="@+id/tvDateTime"
@@ -24,7 +25,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
 
         tools:text="PANIFICADORA BARAO ITA"
         android:textSize="24sp"
@@ -55,7 +56,8 @@
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/tvPlace"
-        app:layout_constraintTop_toTopOf="@+id/tvPlace" />
+        app:layout_constraintTop_toTopOf="@+id/tvPlace"
+        android:contentDescription="@string/money_icon_ct_description" />
 
     <View
         android:id="@+id/vTopLine"

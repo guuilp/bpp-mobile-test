@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">BPP Mobile Test</string>
+    <string name="empty_state_text">Your invoice is empty. Make some orders to see your expenses here!</string>
+    <string name="invoice_screen_toolbar_name">Invoice List</string>
+    <string name="logout_menu_title">Logout</string>
+    <string name="dialog_logout_text">Are you sure you want to leave?</string>
+    <string name="dialog_logout_title">Logout</string>
+    <string name="login_password_field_title">Password</string>
+    <string name="log_in_email_title">Email</string>
+    <string name="log_in_button_title">Log in</string>
+    <string name="money_icon_ct_description">Money Icon</string>
 </resources>

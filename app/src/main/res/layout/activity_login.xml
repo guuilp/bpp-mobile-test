@@ -23,11 +23,10 @@
             android:id="@+id/tietEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="@string/log_in_email_title"
             android:imeOptions="actionSearch"
             android:inputType="textEmailAddress"
-            android:singleLine="true"
-            android:text="waldisney@brasilprepagos.com.br" />
+            android:singleLine="true" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -50,24 +49,24 @@
             android:id="@+id/tietPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/login_password_field_title"
             android:imeOptions="actionSearch"
             android:inputType="textPassword"
-            android:singleLine="true"
-            android:text="Br@silPP123" />
+            android:singleLine="true" />
 
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btLogin"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="44dp"
         android:layout_marginTop="24dp"
         android:layout_marginRight="44dp"
 
-        android:text="Log in"
+        style="@style/Widget.AppCompat.Button.Colored"
+
+        android:text="@string/log_in_button_title"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
