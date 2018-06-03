@@ -31,17 +31,19 @@ class ApiResponse<T> {
             errorMessage = null
         } else {
             var message: String? = null
-            if (response.errorBody() != null) {
+
+            response.errorBody()?.let {
                 try {
-                    message = response.errorBody()!!.string()
+                    message = it.string()
                 } catch (ignored: IOException) {
                     Log.e("Parse", "error while parsing response")
                 }
-
             }
-            if (message == null || message.trim { it <= ' ' }.isEmpty()) {
+
+            if (message == null || (message != null && message!!.trim { it <= ' ' }.isEmpty())) {
                 message = response.message()
             }
+
             errorMessage = message
             body = null
         }

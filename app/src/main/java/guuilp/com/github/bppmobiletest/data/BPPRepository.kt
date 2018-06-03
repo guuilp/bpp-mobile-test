@@ -27,7 +27,7 @@ class BPPRepository(val local: BPPLocal,
         val call = remote.login(email, password)
 
         result.addSource(call){ response ->
-            if(response != null && response.isSuccessful && response.body!!.code == "200"){
+            if(response != null && response.isSuccessful && response.body?.code == "200"){
                 mainThread {
                     result.value = Resource.success(response.body)
                 }
